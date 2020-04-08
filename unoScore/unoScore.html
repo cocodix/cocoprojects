@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+    integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+  <link rel="stylesheet" href="../style.css">
+  <link rel="stylesheet" href="unoStyle.css">
+  <title>UNO score</title>
+</head>
+
+<body>
+  <div id="container">
+    <div class="menu">
+      <ul>
+        <li><a href="../index.html">HOME</a></li>
+        <li><a class="tree"><i class="fas fa-pencil-alt"></i>UNO score</a></li>
+      </ul>
+    </div>
+
+
+
+    <div id="uno-score">
+      <div class="buttons">
+        <button id="add-teams">Team play</button>
+        <button id="add-player">Add player</button>
+        <button id="round-score">Round score</button>
+        <!-- <button id="end-game">End Game (SUM)</button> -->
+      </div>
+      <div class="list">
+        <div class="single-play">
+          <!-- <div class="player">
+            <h3>Marina</h3>
+            <ol>
+              <li>30</li>
+              <li>30</li>
+            </ol>
+          </div>
+          <div class="player">
+            <h3>Coco</h3>
+            <ol>
+              <li>130</li>
+              <li class="total">10</li>
+            </ol>
+          </div>
+        </div> -->
+          <div class="team-play" style="display: none">
+
+          </div>
+          <!-- <div class="team-play">
+            <div class="player">
+              <h3>Marina</h3>
+              <ol>
+                <li>30</li>
+                <li>30</li>
+  
+              </ol>
+            </div>
+            <div class="player">
+              <h3>Coco</h3>
+              <ol>
+                <li>130</li>
+                <li>10</li>
+                <li>0</li>
+              </ol>
+            </div>
+          </div> -->
+
+
+        </div>
+
+      </div>
+
+      <button id="end-game" style="display: none">End Game (SUM)</button>
+
+    </div>
+
+    <div id="modal">
+      <div id="card">
+        <div id="mod-cont">
+          <div id="mod-inner">
+            <h5>WINNER</h5>
+            <h2 id="winner"></h2>
+            <p id="winn-score">score</p>
+            <ul id="looser-list">
+            </ul>
+            <h5>LOOSER</h5>
+            <h2 id="looser"></h2>
+            <p id="looser-score">score</p>
+          </div>
+        </div>
+        <button id="mod-close"><i class="fas fa-times-circle"></i>CLOSE</button>
+      </div>
+    </div>
+
+
+
+    <script src="unoScript.js"></script>
+</body>
+
+</html>

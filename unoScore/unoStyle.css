@@ -1,0 +1,385 @@
+/*  todo
+Plava #0c79c2;
+
+T plava #114c88;
+
+Zelena #8cc601;
+
+T Zelena #3bad24;
+
+
+Crvena #e21f01;
+
+T Crvena #a10000;
+
+Zuta #feda00;
+
+T zuta #c9a701;
+
+*/
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background: #022c43;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  margin: 0;
+  padding: 0;
+}
+
+.menu {
+  background: #053f5e;
+}
+
+#uno-score {
+  margin: 50px auto;
+  background: rgb(12, 121, 194);
+  background: radial-gradient(circle, rgba(12, 121, 194, 1) 48%, rgba(22, 98, 174, 1) 100%);
+  border: 1px solid #1d5396;
+  box-shadow: 5px 5px 15px rgba(35, 35, 35, 0.6);
+  width: 80vw;
+  height: 90vh;
+  display: flex;
+  flex-flow: column;
+  transition: 0.5s;
+}
+
+.buttons {
+  padding: 0.5em;
+  display: flex;
+  justify-content: space-around;
+}
+
+/** buttons start **/
+
+.buttons button {
+  cursor: pointer;
+  font-size: 1.1em;
+  padding: 0.5em 1em;
+  text-transform: uppercase;
+  background: #8cc601;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 1px 2px 5px #022c43;
+}
+
+.buttons button:hover {
+  background: #3bad24;
+}
+
+#add-player {
+  background: #1662ae;
+  color: #fff;
+}
+
+#add-player:hover {
+  background: #114c88;
+}
+
+#round-score {
+  background: #fed403;
+}
+
+#round-score:hover {
+  background: #c9a701;
+}
+
+#end-game {
+  background: #e21f01;
+  color: #fff;
+}
+
+#end-game {
+  cursor: pointer;
+  font-size: 1.1em;
+  padding: 0.5em 1em;
+  margin: 10px;
+  text-transform: uppercase;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 1px 2px 5px #022c43;
+}
+#end-game:hover {
+  background: #a10000;
+}
+
+/** buttons ends **/
+
+.list {
+  display: flex;
+  flex-flow: column;
+}
+
+.team-play,
+.single-play {
+  display: flex;
+  flex-flow: column;
+  border: 1px solid white;
+  margin: 10px;
+  background: rgba(255, 255, 255, 0.4);
+}
+
+.team-play h3,
+.single-play h3 {
+  display: inline-block;
+  width: 4.5em;
+  padding-left: 1em;
+  margin: 1.4em 0;
+  color: #114c88;
+  font-weight: 400;
+}
+
+.player {
+  display: flex;
+  justify-content: space-between;
+}
+
+ol {
+  list-style: none;
+  padding: 0;
+  font-size: 1.3em;
+  counter-reset: counter;
+  display: flex;
+  flex-flow: row wrap;
+  flex: 1 1 auto;
+}
+
+ol li {
+  counter-increment: counter;
+  color: #d61b09;
+  position: relative;
+  width: 3.5em;
+  text-align: center;
+  margin: 10px;
+}
+
+ol li::before {
+  font-size: 0.5em;
+  content: counter(counter) '.';
+  color: rgba(63, 72, 91, 1);
+  text-align: center;
+  position: absolute;
+  bottom: 2.5em;
+  left: 3.2em;
+}
+
+.player a {
+  height: 2em;
+  cursor: pointer;
+  color: #8cc601;
+  text-decoration: none;
+  font-size: 0.9em;
+  padding: 5px;
+  position: relative;
+  top: 1.5em;
+}
+
+/** MODAL **/
+
+#modal {
+  display: none;
+  height: 100%;
+  width: 100%;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.6);
+  color: #e21f01;
+  position: fixed;
+  z-index: 1;
+}
+
+#card {
+  width: 400px;
+  box-shadow: 10px 15px 15px 2px rgba(7, 13, 41, 1);
+  margin: 20vh auto 0 auto;
+}
+
+#mod-cont {
+  width: 400px;
+  height: 60vh;
+  background: #a10000;
+  padding: 0.5em;
+  position: relative;
+  animation-name: animatetop;
+  animation-duration: 0.4s;
+}
+
+@keyframes animatetop {
+  from {
+    top: -300px;
+    opacity: 0;
+  }
+  to {
+    top: 0;
+    opacity: 1;
+  }
+}
+
+#mod-inner {
+  background: white;
+  width: 100%;
+  height: 100%;
+  border-radius: 50% / 50%;
+  padding: 0.5em;
+}
+
+#mod-cont h2 {
+  text-align: center;
+  margin: 0.2em 0;
+}
+
+#mod-winner {
+  font-weight: 800;
+}
+
+#mod-cont h3 {
+  text-align: center;
+}
+
+#mod-cont p {
+  margin: 0;
+}
+
+#mod-cont ul {
+  list-style: none;
+  margin: 1em 0;
+  padding: 0;
+  font-size: 1.2em;
+}
+#mod-cont li {
+  margin: 0.5em;
+}
+
+#mod-close {
+  display: block;
+  width: 400px;
+  margin: 0 auto;
+  padding: 0.5em;
+  font-size: 1em;
+  font-weight: 800;
+  background: #a10000;
+  color: white;
+  border: none;
+  position: relative;
+  animation-name: animatebottom;
+  animation-duration: 0.4s;
+}
+
+@keyframes animatebottom {
+  from {
+    bottom: -300px;
+    opacity: 0;
+  }
+  to {
+    bottom: 0;
+    opacity: 1;
+  }
+}
+
+@media only screen and (max-width: 812px) {
+  #uno-score {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+  }
+
+  .buttons {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+  }
+  .buttons button {
+    font-size: 1em;
+    padding: 0.2em 0.5em;
+    flex: 1 1 auto;
+    margin: 0.5em;
+  }
+
+  .team-play,
+  .single-play {
+    flex-flow: row wrap;
+    justify-content: space-around;
+  }
+
+  .player {
+    flex-flow: column;
+    padding: 0;
+    margin: 0;
+  }
+
+  .team-play h3,
+  .single-play h3 {
+    width: 3em;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+  }
+
+  ol {
+    font-size: 1em;
+    flex-flow: column wrap;
+    flex: 1 1 auto;
+    margin: 0.1em 0;
+  }
+
+  ol li {
+    position: static;
+    width: 2em;
+    text-align: center;
+    margin: 10px;
+  }
+  ol li::before {
+    position: static;
+    margin-right: 5px;
+  }
+
+  .player a {
+    position: static;
+    font-size: 0.6em;
+    margin-left: 10px;
+  }
+
+  /* .player a {
+    height: 2em;
+    cursor: pointer;
+    color: #8cc601;
+    text-decoration: none;
+    font-size: 0.9em;
+    padding: 5px;
+    position: relative;
+    top: 1.5em;
+  } */
+
+  #mod-cont {
+    max-width: 300px;
+  }
+
+  #card {
+    width: 300px;
+  }
+
+  #mod-close {
+    width: 300px;
+  }
+}
+
+@media only screen and (max-width: 320px) {
+  #card {
+    max-width: 220px;
+  }
+
+  #mod-cont {
+    max-width: 220px;
+  }
+  #mod-close {
+    width: 220px;
+  }
+}

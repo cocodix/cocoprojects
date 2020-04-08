@@ -1,0 +1,83 @@
+* {
+  box-sizing: border-box;
+}
+
+#modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: rgba(5, 63, 94, 0.9);
+
+  z-index: 1;
+}
+
+#modal-content {
+  width: 90%;
+  height: 90%;
+  margin: 3em auto;
+  background: #053f5e;
+  padding: 5em;
+  overflow: auto;
+  box-sizing: border-box;
+}
+
+#modal h3 {
+  text-align: center;
+  font-size: 2em;
+  color: white;
+  font-weight: 600;
+}
+
+#modal p {
+  margin-top: 5em;
+  text-align: justify;
+  color: white;
+  font-size: 20px;
+  line-height: 150%;
+}
+
+#modal button {
+  letter-spacing: 0;
+  margin-top: 3em;
+  width: 100%;
+  color: white;
+  border-radius: 5px;
+  font-size: 1em;
+  padding: 6px 20px;
+  cursor: pointer;
+  border: 1px solid #bbb;
+  background-color: #269ce9;
+  border-color: #269ce9;
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.2);
+}
+
+#modal button:hover {
+  background-color: #70b9e8;
+  color: #555;
+  letter-spacing: 0;
+}
+
+#howToPlay:hover {
+  cursor: pointer;
+}
+
+@media screen and (max-width: 812px) {
+  #modal p {
+    margin-top: 1em;
+    font-size: 15px;
+    line-height: 120%;
+  }
+
+  #modal h3 {
+    text-align: center;
+    font-size: 1.1em;
+    font-weight: 300;
+  }
+
+  #modal-content {
+    padding: 2em;
+  }
+}

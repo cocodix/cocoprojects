@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+    integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+  <link rel="stylesheet" href="../style.css">
+  <link rel="stylesheet" href="bmiStyle.css">
+  <title>BMI Calculator</title>
+</head>
+
+<body>
+  <div id="container">
+    <div class="menu">
+      <ul>
+        <li><a href="../index.html">HOME</a></li>
+        <li><a class="one"><i class="fas fa-calculator"></i>BMI calculator</a></li>
+      </ul>
+    </div>
+
+    <div id="bmiCalc">
+      <form>
+        <label for="mass">Your weight</label>
+        <input type="text" name="mass" id="mass" placeholder="in kg">
+
+        <label for="height">Your height</label>
+        <input type="text" name="height" id="height" placeholder="in cm">
+
+        <input type="submit" value="Calculate">
+      </form>
+
+      <p class="hidden"></p>
+      <p class="hidden second"></p>
+    </div>
+
+  </div>
+  <script src="app.js"></script>
+</body>
+
+</html>

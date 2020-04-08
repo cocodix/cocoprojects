@@ -1,0 +1,195 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+
+html {
+  color: #053f5e;
+}
+body {
+  background: #053f5e;
+  font-family: 'Raleway', sans-serif;
+}
+
+#pigGame {
+  margin: 50px auto;
+  background: #05476b;
+  border: 1px solid white;
+  display: flex;
+  width: 80vw;
+  height: 90vh;
+  box-shadow: 5px 5px 15px 1px rgb(63, 136, 180);
+}
+
+.player-0-panel {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  flex: 3;
+}
+
+.player-1-panel {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  flex: 3;
+}
+
+#buttons {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  flex: 2;
+}
+
+.player-name {
+  font-size: 4em;
+}
+
+.player-score {
+  font-size: 8rem;
+  padding: 30px;
+  color: #ab2611;
+  border-radius: 10px;
+  font-family: 'Montserrat', sans-serif;
+  background: rgba(255, 255, 255, 0.5);
+}
+
+.player-current-box {
+  width: 40%;
+  height: 20%;
+  background: rgba(0, 69, 77, 0.5);
+  margin: 0 auto;
+  padding: 12px;
+  text-align: center;
+}
+
+.player-current-label {
+  text-transform: uppercase;
+  margin: 10px auto;
+  font-size: 1.2em;
+  color: #fff;
+}
+
+.player-current-score {
+  font-size: 4em;
+  font-weight: 200;
+  color: #fff;
+}
+
+button {
+  border: 0;
+  background: none;
+  font-family: 'Raleway', sans-serif;
+  letter-spacing: 1px;
+  cursor: pointer;
+  font-size: 2em;
+  color: white;
+  transition: 0.5s;
+}
+
+button:hover {
+  letter-spacing: 2px;
+}
+
+#buttons span {
+  font-size: 0.7em;
+}
+
+button i {
+  position: relative;
+  right: 10px;
+}
+
+.circle i {
+  position: relative;
+  left: 20px;
+  bottom: 5px;
+  color: red;
+  font-size: 30px;
+}
+
+.dice {
+  max-width: 100px;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 5px 5px 5px rgba(53, 53, 53, 0.4);
+}
+
+.active0 {
+  background: linear-gradient(to right, rgba(0, 200, 222, 1) 0%, rgba(255, 255, 255, 0) 100%);
+  color: white;
+}
+
+.active1 {
+  background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(0, 202, 224, 1) 100%);
+  color: white;
+}
+
+.invisible {
+  opacity: 0;
+}
+
+@media screen and (max-width: 812px) {
+  #pigGame {
+    width: 90%;
+    flex-flow: column nowrap;
+  }
+  .player-0-panel {
+    flex-flow: row wrap;
+    justify-content: space-around;
+  }
+
+  .player-1-panel {
+    flex-flow: row wrap-reverse;
+    justify-content: space-around;
+  }
+
+  #buttons {
+    flex-flow: row wrap;
+    justify-content: space-around;
+  }
+
+  .dice {
+    max-width: 50px;
+  }
+  .player-name {
+    font-size: 20px;
+    flex: 1 100%;
+    text-align: center;
+  }
+
+  .player-score {
+    font-size: 50px;
+  }
+
+  .player-current-box {
+    padding: 0;
+    margin: 0;
+    width: 80px;
+    height: 80px;
+  }
+
+  .player-current-label {
+    font-size: 15px;
+    color: #fff;
+  }
+
+  .player-current-score {
+    font-size: 30px;
+    font-weight: 200;
+    color: #fff;
+  }
+
+  button {
+    font-size: 20px;
+  }
+
+  .active0 {
+    background: linear-gradient(to bottom, rgba(0, 200, 222, 1) 0%, rgba(255, 255, 255, 0) 100%);
+  }
+
+  .active1 {
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, rgba(0, 202, 224, 1) 100%);
+  }
+}

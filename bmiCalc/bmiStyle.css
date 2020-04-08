@@ -1,0 +1,84 @@
+h1 {
+  text-align: center;
+}
+
+#container {
+  margin-left: auto;
+  margin-right: auto;
+  box-sizing: border-box;
+  background: #ffd700;
+}
+
+label {
+  font-size: 20px;
+  display: inline-block;
+  margin-bottom: 5px;
+}
+
+#bmiCalc {
+  width: 70vw;
+  padding: 10px;
+  margin-top: 50px;
+  margin-left: auto;
+  margin-right: auto;
+  background: white;
+  border-radius: 10px;
+  box-sizing: border-box;
+  box-shadow: 5px 5px 10px #5e5d5d;
+}
+
+input[type='text'] {
+  width: 100%;
+  font-size: 20px;
+  padding: 5px;
+  border-radius: 3px;
+  box-sizing: border-box;
+  margin-bottom: 10px;
+}
+
+input[type='submit'] {
+  margin-top: 10px;
+  width: 100%;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 20px;
+  padding: 10px 20px;
+  background: #022c43;
+  color: #fff;
+}
+
+p {
+  display: inline-block;
+  margin: 10px 0px;
+  width: 100%;
+  padding: 5px;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.hidden {
+  opacity: 0;
+}
+
+.error {
+  color: red;
+}
+
+.green {
+  color: green;
+}
+.darkRed {
+  color: red;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.status {
+  color: #3498db;
+}
+
+@media screen and (max-width: 812px) {
+  #bmiCalc {
+    width: 90%;
+  }
+}

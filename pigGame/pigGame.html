@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+    integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+  <link rel="stylesheet" href="../style.css">
+  <link rel="stylesheet" href="pigStyle.css">
+  <link rel="stylesheet" href="pigModal.css">
+  <title>Pig game</title>
+</head>
+
+<body>
+  <div id="container">
+    <div class="menu">
+      <ul>
+        <li><a href="../index.html">HOME</a></li>
+        <li><a class="two"><i class="fas fa-dice"></i>Pig game</a></li>
+        <li><a href="#" id="howToPlay">How to play</a></li>
+      </ul>
+    </div>
+
+    <div id="pigGame">
+      <div class="player-0-panel active0">
+        <div class="player-name" id="name-0">Player 1</div>
+        <div class="player-score" id="score-0">123</div>
+        <div class="player-current-box">
+          <div class="player-current-label">Current</div>
+          <div class="player-current-score" id="current-0">110</div>
+        </div>
+      </div>
+
+      <div id="buttons">
+
+        <button class="btn-new"><i class="fas fa-play-circle"></i>New game <span>(N)</span></button>
+
+        <img src="sourceFiles/diceAnimation.gif" alt="Dice" class="dice invisible">
+
+        <button class="btn-roll"><i class="fas fa-dice"></i>Roll dice <span>(R)</span></button>
+        <button class="btn-hold"><i class="fas fa-hand-point-down"></i>Hold <span>(H)</span></button>
+      </div>
+
+      <div class="player-1-panel">
+        <div class="player-name" id="name-1">Player 2</div>
+        <div class="player-score" id="score-1">72</div>
+        <div class="player-current-box">
+          <div class="player-current-label">Current</div>
+          <div class="player-current-score" id="current-1">0</div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <div id="modal">
+    <div id="modal-content">
+      <h3>How to play PIG dice game</h3>
+      <p>The game has 2 players, playing in rounds. <br>
+        In each turn, a player rolls a dice as many times as he
+        whishes. <br>
+        Each result get added to his ROUND score. <br>
+        BUT, if the player rolls a 1, all his ROUND score gets lost. <br>
+        After that, it's the next player's turn. <br>
+        The player can choose to 'Hold', which means that his ROUND score gets added
+        to his GLOBAL score. <br>
+        After that, it's the next player's turn. The first player to reach 100 points on GLOBAL
+        score wins the game</p>
+      <button id="okBtn">Ok, i got it!</button>
+    </div>
+  </div>
+  <script src="pigGame.js"></script>
+</body>
+
+</html>

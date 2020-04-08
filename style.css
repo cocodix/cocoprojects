@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway:400,800&display=swap');
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Raleway', sans-serif;
+}
+
+#container {
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+  flex-direction: column;
+}
+
+/* MENU */
+.menu {
+  display: block;
+  width: 100%;
+  background: #022c43;
+  color: #fff;
+}
+
+.menu ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: row;
+}
+
+.menu a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.2em;
+  padding: 1em;
+  display: block;
+}
+
+.menu a:hover {
+  background: #115173;
+}
+
+/* MENU END */
+
+#cards {
+  height: 100%;
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.card {
+  height: 50%;
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card a {
+  font-size: 3em;
+  text-align: center;
+  text-decoration: none;
+  color: #fff;
+}
+
+i {
+  font-size: 1.3em;
+  position: relative;
+  right: 10px;
+  top: 5px;
+}
+
+.one {
+  background: #ffd700;
+}
+
+.two {
+  background: #053f5e;
+}
+
+.tree {
+  background: #022c43;
+}
+
+.four {
+  background: #115173;
+}
+
+@media screen and (max-width: 812px) {
+  .menu ul {
+    display: block;
+    text-align: center;
+  }
+
+  .menu a {
+    font-size: 1.5em;
+    padding: 10px;
+  }
+
+  #cards {
+    display: block;
+    text-align: center;
+  }
+
+  .card {
+    height: 50%;
+    width: 100%;
+  }
+}
